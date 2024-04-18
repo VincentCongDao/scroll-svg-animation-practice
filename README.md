@@ -12,6 +12,9 @@ Scroll-SVG-animation
 - Understands how to use svg animation with gasp.js
 
 ## Credits
+There is another project that I have done before, it is mostly vertical scroll
+- [Samurai Champloo](https://github.com/VincentCongDao/Samurai-Champloo_GSAP?tab=readme-ov-file)
+
 1. Image: 
       1. [Unsplash](https://unsplash.com/)
       1. [Pexels](www.pexels.com)

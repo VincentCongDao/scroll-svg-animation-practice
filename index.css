@@ -1,0 +1,189 @@
+:root {
+      --dark-ascent: rgb(63, 63, 63);
+      --white-ascent: white;
+}
+
+* {
+      font-family: "Rubik",
+            sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+      color: var(--white-ascent)
+}
+
+body {
+      background-color: var(--dark-ascent);
+}
+
+/* nav */
+.nav-wrapper {
+      display: block;
+      z-index: 5;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 5rem;
+      margin-right: 5rem;
+      align-items: center;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      overflow: hidden
+}
+
+.logo-name {
+      flex: 0.1
+}
+
+.nav-body {
+      flex: 4;
+}
+
+.nav-container {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      justify-content: space-evenly;
+      flex: 1;
+}
+
+.nav-icon {
+      font-size: 30px !important;
+      color: var(--white-ascent);
+      user-select: none !important;
+      cursor: pointer;
+}
+
+.nav-list a {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--white-ascent);
+}
+
+.hero-wrapper {
+      position: relative;
+      height: 500px;
+      overflow: hidden;
+      z-index: 999;
+
+}
+
+.hero-content {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      padding-top: 120px;
+      left: 10%;
+      height: 100%;
+}
+
+.flex-space {
+      flex: 1;
+}
+
+.hero-content>.hero-title {
+      font-size: 34px;
+      width: min-content;
+}
+
+.hero-content>.hero-button {
+      width: 150px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: transparent;
+      border-radius: 5px;
+      color: white;
+}
+
+.hero-content>.hero-button:hover {
+      content: ""
+}
+
+.hero-image {}
+
+.blob {
+      position: absolute;
+      mix-blend-mode: lighten;
+      left: 30%;
+      width: 100%;
+      z-index: 5;
+}
+
+.blob_1 {
+      animation-name: blob-dance;
+      width: 50%;
+      height: 750px;
+      border-radius: 62% 38% 86% 14% / 16% 58% 42% 84%;
+      background-color: rgba(151, 240, 182, 0.877);
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-duration: 15s;
+}
+
+.blob_2 {
+      animation-name: blob-dance-2;
+      width: 45%;
+      height: 750px;
+      border-radius: 30% 70% 49% 51% / 16% 34% 66% 84%;
+      background-color: rgb(184, 155, 234);
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-duration: 15s;
+}
+
+.hero-logo {
+      z-index: 1;
+      position: absolute;
+      width: 25%;
+      top: 100px;
+      right: 0px;
+}
+
+@keyframes blob-dance {
+      0% {
+            border-radius: 62% 38% 86% 14% / 16% 58% 42% 84%;
+      }
+
+      25% {
+            border-radius: 30% 70% 49% 51% / 16% 34% 66% 84%
+      }
+
+      50% {
+            border-radius: 77% 23% 49% 51% / 65% 10% 90% 35%
+      }
+
+      100% {
+            border-radius: 62% 38% 86% 14% / 16% 58% 42% 84%;
+      }
+}
+
+@keyframes blob-dance-2 {
+      0% {
+            border-radius: 30% 70% 49% 51% / 16% 34% 66% 84%
+      }
+
+      25% {
+            border-radius: 62% 38% 86% 14% / 16% 58% 42% 84%;
+      }
+
+      50% {
+            border-radius: 16% 84% 39% 61% / 65% 10% 90% 35%
+      }
+
+      100% {
+            border-radius: 30% 70% 49% 51% / 16% 34% 66% 84%
+      }
+
+
+}
