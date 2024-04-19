@@ -53,8 +53,38 @@
                   </div>
             </section>
             <section aria-label="About">
+                  <div class="title">
+                        <h1>
+                              Our Porfolio
+                        </h1>
+                  </div>
                   <div class="vertical-scroll">
-
+                        <div class="vertical-slider">
+                              <div class="about-body">
+                                    <div class="inner">
+                                          <img src="./assets/furniture_1.jpg" alt="Bathroom" />
+                                          <div class="about-content">
+                                                <h1>Bathroom</h1>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="about-body">
+                                    <div class="inner">
+                                          <img src="./assets/furniture_3.jpg" alt="Bathroom" />
+                                          <div class="about-content">
+                                                <h1>Bed Room</h1>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="about-body">
+                                    <div class="inner">
+                                          <img src="./assets/furniture_4.jpg" alt="Bathroom" />
+                                          <div class="about-content">
+                                                <h1>Living Room</h1>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
                   </div>
                   <div class="horizontal-scroll">
 
@@ -73,6 +103,30 @@
 
             <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
             <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
+            <script>
+                  document.addEventListener('DOMContentLoaded', function () {
+                        const slider = document.querySelector(".vertical-slider");
+                        const sections = gsap.utils.toArray(".vertical-slider .about-body");
+
+                        let tl = gsap.timeline({
+                              defaults: {
+                                    ease: "none"
+                              },
+                              scrollTrigger: {
+                                    trigger: slider,
+                                    pin: true,
+                                    scrub: true,
+                                    end: () => "+=" + slider.offsetWidth
+                              }
+                        });
+
+                        tl.to(slider, {
+                              xPercent: -66
+                        });
+
+                  });
+
+            </script>
       </body>
 
 </html>

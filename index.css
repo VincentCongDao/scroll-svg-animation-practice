@@ -45,6 +45,14 @@ body {
       flex: 0.1
 }
 
+.title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+      font-size: 40px
+}
+
 .nav-body {
       flex: 4;
 }
@@ -86,6 +94,7 @@ body {
       padding-top: 120px;
       left: 10%;
       height: 100%;
+      z-index: 10;
 }
 
 .flex-space {
@@ -104,10 +113,14 @@ body {
       background-color: transparent;
       border-radius: 5px;
       color: white;
+      margin-bottom: 50px;
+      border: 1px solid black;
+      transition: 1s;
 }
 
 .hero-content>.hero-button:hover {
-      content: ""
+      content: "";
+      background-color: rgba(151, 240, 182, 0.877)
 }
 
 .hero-image {}
@@ -150,6 +163,42 @@ body {
       right: 0px;
 }
 
+.vertical-scroll {
+      overflow-x: hidden;
+}
+
+.vertical-slider {
+      display: flex;
+      width: 300vw;
+}
+
+.about-body {
+      height: 100vh;
+      width: 100%;
+}
+
+.about-body>.inner {
+      position: relative;
+      display: flex;
+      height: calc(100% - 17em);
+      align-items: end;
+
+}
+
+.about-body>.inner img {
+      position: absolute;
+      width: 100%;
+      object-fit: contain;
+      top: 50%;
+      left: 50%;
+      height: 950px;
+      transform: translate(-50%, -50%);
+}
+
+.about-content {
+      justify-self: flex-end;
+}
+
 @keyframes blob-dance {
       0% {
             border-radius: 62% 38% 86% 14% / 16% 58% 42% 84%;
@@ -184,6 +233,13 @@ body {
       100% {
             border-radius: 30% 70% 49% 51% / 16% 34% 66% 84%
       }
+}
 
+@media screen and (max-width: 768px) {
 
+      .blob_1,
+      .blob_2 {
+            left: -100px;
+            width: 100%;
+      }
 }
